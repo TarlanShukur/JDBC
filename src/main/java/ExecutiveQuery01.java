@@ -51,11 +51,18 @@ public class ExecutiveQuery01 {
 
         System.out.println("--------Ornek4---------");
 
+        String query4="select isim,puan from ogrenciler4 where puan>(select avg(puan)from ogrenciler4);\n";
+        ResultSet rs4=st.executeQuery(query4);
 
+        while (rs4.next()){
+            System.out.println();
 
+        }
 
+        String query5="";
+        ResultSet rs5= st.executeQuery(query5);
 
-
-
+        st.close();
+        con.close();
     }
 }
